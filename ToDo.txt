@@ -1,5 +1,25 @@
 COR
 - event system with time acceleration for the ticks (GetTickTime) and sprint mode (computing ticks as fast as possible without changing the timebase for the ticks in the simulation, decoupling ticks from real time)
+	- Event class
+		- not accessible from outside the event engine
+		- ID
+		- function pointer to callback function
+		- scheduled time
+	- EventEngine class
+		- GetTicksNow()
+		- MakeInactiveEventAndGetIndex()
+		- ActivateEventAndGetID(index)
+		- DeleteEventFromActive(ID)
+		- DeleteEventFromInactive(index)
+		- SetCallbackFunction(index)
+		- ScheduleOnTick(index)
+		- ScheduleFromCurrentTick(index)
+	- the process:
+		- MakeInactiveEventAndGetIndex() // create an event in the inactive que at the first available position, return the index in the vector, search forward to the next available index
+		- SetCallbackFunction(), ScheduleOnTick() or ScheduleFromCurrentTick() // set the information for the event with checks for a valid index
+		- ActivateEventAndGetID(index) // thread safe swap from the inactive que to the active que, if the index is less than the next available index, then set the next available index to this index, clear the inactive que's entry, return the integer ID for the event that is now in the active que
+		- DeleteEventFromActive(ID) use a search through the active que to find the ID and remove it before processing.
+
 - state machine
 - start building the orbital simulation
 	- asset type for heavenly bodies, keplerian orbit event callback for physics (check output with numbers that I can plot in python)

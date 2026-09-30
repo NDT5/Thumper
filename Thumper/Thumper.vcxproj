@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AST_Core.cpp" />
+    <ClCompile Include="COR_Event.cpp" />
     <ClCompile Include="ERR_ErrorEngine.cpp" />
     <ClCompile Include="G3D_Camera.cpp" />
     <ClCompile Include="G3D_Obj_WireFrame.cpp" />
@@ -169,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AST_Core.h" />
+    <ClInclude Include="COR_Event.h" />
     <ClInclude Include="ERR_ErrorEngine.h" />
     <ClInclude Include="G3D_Camera.h" />
     <ClInclude Include="G3D_Include.h" />

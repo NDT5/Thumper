@@ -64,6 +64,9 @@
     <Filter Include="AST\Source Files">
       <UniqueIdentifier>{6a8fe9bd-5d94-4525-b491-71bed88ace16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="COR">
+      <UniqueIdentifier>{73cb2a3d-cd54-4865-bbe5-6c945e410a5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -77,9 +80,6 @@
     </ClCompile>
     <ClCompile Include="WIN_Mouse.cpp">
       <Filter>WIN\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="G3D_Camera.cpp">
-      <Filter>G3D\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="G3D_RenderEngine.cpp">
       <Filter>G3D\Source Files</Filter>
@@ -96,8 +96,14 @@
     <ClCompile Include="UTL_Utilities.cpp">
       <Filter>UTL\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="G3D_Camera.cpp">
+      <Filter>G3D\Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="AST_Core.cpp">
       <Filter>AST\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="COR_Event.cpp">
+      <Filter>COR</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +142,9 @@
     </ClInclude>
     <ClInclude Include="AST_Core.h">
       <Filter>AST\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="COR_Event.h">
+      <Filter>COR</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
