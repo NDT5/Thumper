@@ -364,3 +364,4 @@ FodyWeavers.xsd
 
 # Cursor workspace files
 *.code-workspace
+/Thumper/ai.txt
